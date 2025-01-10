@@ -45,7 +45,7 @@ def run(tubeCode, tokensDir, annotationsDir, outputDir):
 
     overlappingDf = mergedDf[(mergedDf.start_position >= mergedDf.feature_start) & (mergedDf.end_position <= mergedDf.feature_end)]
 
-    overlappingDf = overlappingDf[['contig_id', 'start_position', 'end_position', 'tokens', 'score_x', 'id', 'name', 'gene', 'atributes']]
+    overlappingDf = overlappingDf[['contig_id', 'start_position', 'end_position', 'tokens', 'score_x', 'feature_type', 'id', 'name', 'gene', 'atributes']]
 
     Path(outputDir).mkdir(parents=True, exist_ok=True)
 
