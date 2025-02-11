@@ -36,16 +36,20 @@ def run(tubeCode, tokensDir, annotationsDir, outputDir):
 
     log.info('Obtaining the overlaps')
 
-    mergedDf = tokensDf.merge(
-        annotationDf,
-        how='inner',
-        left_on=['contig_id'],
-        right_on=['sequence_id']
-    )
+    overlappingDfList = []
 
-    overlappingDf = mergedDf[(mergedDf.start_position >= mergedDf.feature_start) & (mergedDf.end_position <= mergedDf.feature_end)]
+    for contigId in tokensDf.contig_id.unique():
+        log.info('Processing contig: ' + str(contigId))
+        mergedDf = tokensDf[tokensDf.contig_id == contigId].merge(
+            annotationDf[annotationDf.sequence_id == contigId],
+            how='inner',
+            left_on=['contig_id'],
+            right_on=['sequence_id']
+        )
+        overlappingDf = mergedDf[(mergedDf.start_position >= mergedDf.feature_start) & (mergedDf.end_position <= mergedDf.feature_end)]
+        overlappingDfList.append(overlappingDf[['contig_id', 'start_position', 'end_position', 'tokens', 'score_x', 'feature_type', 'id', 'name', 'gene', 'atributes']])
 
-    overlappingDf = overlappingDf[['contig_id', 'start_position', 'end_position', 'tokens', 'score_x', 'feature_type', 'id', 'name', 'gene', 'atributes']]
+    overlappingDf = pd.concat(overlappingDfList, ignore_index=True)
 
     Path(outputDir).mkdir(parents=True, exist_ok=True)
 

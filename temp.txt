@@ -1,0 +1,1 @@
+for filename in ~/workspace/genome_data/genome_nlp_tokens/bed_files/SAUR/*; do python scripts/get_annotation_overlaps.py `echo ${filename} | cut -d "/" -f 9 | cut -d '_' -f 1` ~/workspace/genome_data/genome_nlp_tokens/bed_files/SAUR/ ~/workspace/genome_data/annotations/s_aureus_gff3/ ~/workspace/genome_data/genome_nlp_tokens/overlapping_with_annotations/SAUR/; done
