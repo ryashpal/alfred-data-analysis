@@ -1,1 +1,25 @@
-"acrB", "cdiA", "cysA", "dgoT", "fimA", "flgL", "flhA", "flhB", "hsdR", "kdpA", "pdeA", "plaP", "rcsD", "uidC", "ydhK", "yebS", "yprA", "clbB", "dinG", "hisB", "lysR", "tdcA", "xerD", "dnaG", "tsaD"
+acrB
+cdiA
+clbB
+cysA
+dgoT
+dinG
+dnaG
+fimA
+flgL
+flhA
+flhB
+hisB
+hsdR
+kdpA
+lysR
+pdeA
+plaP
+rcsD
+tdcA
+tsaD
+uidC
+xerD
+ydhK
+yebS
+yprA
