@@ -1,25 +1,28 @@
-acrB
-cdiA
-clbB
-cysA
-dgoT
-dinG
-dnaG
-fimA
-flgL
-flhA
-flhB
-hisB
-hsdR
-kdpA
-lysR
-pdeA
-plaP
-rcsD
-tdcA
-tsaD
-uidC
-xerD
-ydhK
-yebS
-yprA
+grep -ir era 
+grep -ir era 
+grep -ir dnag 
+grep -ir pote 
+grep -ir pepf 
+grep -ir lys2b 
+grep -ir smc 
+grep -ir ftsk 
+grep -ir ftsk 
+grep -ir ftsk 
+grep -ir abgb 
+grep -ir abgb 
+grep -ir rela 
+grep -ir tagh 
+grep -ir tagh 
+grep -ir mdlb 
+grep -ir mdlb 
+grep -ir rlha 
+grep -ir cap8l 
+grep -ir narz 
+grep -ir arac 
+grep -ir arac 
+grep -ir arac 
+grep -ir araj 
+grep -ir citt 
+grep -ir rfab 
+grep -ir hrtb 
+grep -ir argj 
